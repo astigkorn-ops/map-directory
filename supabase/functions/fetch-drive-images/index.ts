@@ -1,4 +1,6 @@
-import "jsr:@supabase/functions-js/edge-runtime.d.ts";
+// Removed Deno/Supabase-specific types import that breaks `npm install` tooling.
+// The runtime types are only needed for Supabase edge functions; keep this file
+// compatible with the Node/npm toolchain used in this workspace.
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",

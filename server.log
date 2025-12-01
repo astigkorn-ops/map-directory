@@ -1,0 +1,48 @@
+[dotenv@17.2.3] injecting env (5) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+✓ DATABASE_URL configured (Supabase PostgreSQL)
+Backend API server listening on port 3001
+Serving static frontend from /workspaces/map-directory/dist
+List sidebar buttons error Error: connect ENETUNREACH 2406:da1a:6b0:f608:1c03:12e1:eb81:e347:5432 - Local (:::0)
+    at internalConnect (node:net:1110:16)
+    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)
+    at GetAddrInfoReqWrap.emitLookup [as callback] (node:net:1523:9)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  errno: -101,
+  code: 'ENETUNREACH',
+  syscall: 'connect',
+  address: '2406:da1a:6b0:f608:1c03:12e1:eb81:e347',
+  port: 5432
+}
+List sidebar buttons error Error: connect ENETUNREACH 2406:da1a:6b0:f608:1c03:12e1:eb81:e347:5432 - Local (:::0)
+    at internalConnect (node:net:1110:16)
+    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)
+    at GetAddrInfoReqWrap.emitLookup [as callback] (node:net:1523:9)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  errno: -101,
+  code: 'ENETUNREACH',
+  syscall: 'connect',
+  address: '2406:da1a:6b0:f608:1c03:12e1:eb81:e347',
+  port: 5432
+}
+List panoramas error Error: connect ENETUNREACH 2406:da1a:6b0:f608:1c03:12e1:eb81:e347:5432 - Local (:::0)
+    at internalConnect (node:net:1110:16)
+    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)
+    at GetAddrInfoReqWrap.emitLookup [as callback] (node:net:1523:9)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  errno: -101,
+  code: 'ENETUNREACH',
+  syscall: 'connect',
+  address: '2406:da1a:6b0:f608:1c03:12e1:eb81:e347',
+  port: 5432
+}
+List sidebar buttons error Error: connect ENETUNREACH 2406:da1a:6b0:f608:1c03:12e1:eb81:e347:5432 - Local (:::0)
+    at internalConnect (node:net:1110:16)
+    at defaultTriggerAsyncIdScope (node:internal/async_hooks:472:18)
+    at GetAddrInfoReqWrap.emitLookup [as callback] (node:net:1523:9)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+  errno: -101,
+  code: 'ENETUNREACH',
+  syscall: 'connect',
+  address: '2406:da1a:6b0:f608:1c03:12e1:eb81:e347',
+  port: 5432
+}

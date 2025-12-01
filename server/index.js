@@ -1,5 +1,7 @@
 import express from 'express';
 import { Client } from 'pg';
+import { existsSync } from 'fs';
+import path from 'path';
 import dotenv from 'dotenv';
 import { 
   getUserByAuthId, 
@@ -755,9 +757,24 @@ app.delete('/api/panoramas/:id', async (req, res) => {
   }
 });
 
+// If a production build exists in `dist/`, serve it as static files.
+const distPath = path.join(process.cwd(), 'dist');
+if (existsSync(distPath)) {
+  app.use(express.static(distPath));
+
+  // Serve index.html for non-API routes (SPA fallback).
+  // Use a regex to avoid route parser issues with '*' patterns.
+  app.get(/^(?!\/api).*/, (req, res) => {
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
+
 const port = process.env.PORT || 3001;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Backend API server listening on port ${port}`);
+  if (existsSync(distPath)) {
+    console.log(`Serving static frontend from ${distPath}`);
+  }
 });
 
 
